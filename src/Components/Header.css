@@ -1,0 +1,21 @@
+.HeaderBody{
+    height: 100px;
+    width: auto;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderBodyDiv{
+    height: 70px;
+    width: 25%;
+}
+.HeaderBodyDiv2{
+    height: 70px;
+    width: 73%;
+    background-color: aliceblue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
