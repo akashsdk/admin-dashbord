@@ -9,6 +9,7 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 import Home from './Screen/Home';
 import Header from './Components/Header';
+import WrongPage from './Others/WrongPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <div className='App'>
           <Header />
           <Routes>
+            <Route path="*" element={<WrongPage />} />
             <Route path="/" element={<Home />} />
           </Routes>
           {/* <Footer /> */}
