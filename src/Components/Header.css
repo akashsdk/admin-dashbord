@@ -9,6 +9,9 @@
 .HeaderBodyDiv{
     height: 70px;
     width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .HeaderBodyDiv2{
     height: 70px;

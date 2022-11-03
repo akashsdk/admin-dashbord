@@ -1,0 +1,46 @@
+.HomeHeaderBody{
+    height: auto;
+    width: auto;
+    background-color: aqua;
+    display: flex;
+}
+.HomeHeaderBodyDiv{
+    height: 700px;
+    width: 300px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+}
+.HomeHeaderBodyDiv2{
+    height: 70px;
+    width: 73%;
+    margin-top: 20px;
+    margin-left: 1%;
+    background-color: aliceblue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HomeLeftDiv{
+    background-color: #fff;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HomeLine{
+    background-color: black;
+    height: .5px;
+    width: 300px;
+    opacity: .4;
+}
+.HomeLeftDownDiv{
+    height: auto;
+    width: 300px;
+    margin-top: 20px;
+}
+.HomeLeftDownButtonDiv{
+    margin-top: 10px;
+}
