@@ -9,9 +9,12 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 import Home from './Screen/Home';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 import WrongPage from './Others/WrongPage';
 import SignIn from './Components/SignIn';
+import LogIn from './Components/LogIn';
 import Profile from './Screen/Profile'
+
 
 function App() {
   return (
@@ -23,9 +26,10 @@ function App() {
             <Route path="*" element={<WrongPage />} />
             <Route path="/" element={<Home />} />
             <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/LogIn" element={<LogIn />} />
             <Route path="/Profile" element={<Profile />} />
           </Routes>
-          {/* <Footer /> */}
+           {/* <Footer />  */}
         </div>
       </BrowserRouter>
     </ConfigProvider>
