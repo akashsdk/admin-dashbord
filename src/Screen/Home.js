@@ -3,9 +3,10 @@ import '../Styles/Home.css';
 import {
   Button, Checkbox, Form, Input, Layout,
   Col, Row, Radio, message, notification,
-  Drawer, Space, Modal,
+  Drawer, Space, Modal, Popconfirm
 } from 'antd';
 import { HomeOutlined, SearchOutlined, BellOutlined, MenuOutlined } from '@ant-design/icons';
+import { Link, } from "react-router-dom";
 
 const { Header, Footer, Sider, Content } = Layout;
 const key = 'updatable';
@@ -219,7 +220,12 @@ export default function Home() {
             </Drawer>
             <div onClick={showModal} className='HomeSearchProfile'></div>
             <Modal title="👋  Hey, Akash" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-              
+              <div style={{display:'flex', flexDirection:'column'}}>
+                <Link style={{ marginTop:'15px' }} to="/Profile">Profile Setting</Link>
+                <Link style={{ marginTop:'15px' }} to="/">Newsletter Setting</Link>
+                <Link style={{ color: 'red',marginTop:'15px' }} to="/SignIn">Log out</Link>
+              </div>
+
             </Modal>
           </div>
           <div style={{ width: '10px' }} />

@@ -10,6 +10,8 @@ import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from './Screen/Home';
 import Header from './Components/Header';
 import WrongPage from './Others/WrongPage';
+import SignIn from './Components/SignIn';
+import Profile from './Screen/Profile'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Routes>
             <Route path="*" element={<WrongPage />} />
             <Route path="/" element={<Home />} />
+            <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/Profile" element={<Profile />} />
           </Routes>
           {/* <Footer /> */}
         </div>
