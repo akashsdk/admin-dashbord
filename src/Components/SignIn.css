@@ -1,0 +1,64 @@
+.SignInLeft{
+    height: auto;
+    width: 50%;
+}
+@media screen and (max-width: 950px) {
+    .SignInLeft {
+        width: 100%;
+    }
+}
+.SignInRight{
+    height: auto;
+    width: 50%;
+    background-color: aqua;
+}
+@media screen and (max-width: 950px) {
+    .SignInRight {
+        display: none;
+    }
+}
+.SignInLeftLink{
+    display: flex;
+    margin: 20px;
+}
+.SignInLeftIcon{
+    font-size: 25px;
+    color: black;
+    margin: 20px;
+    opacity: .4;
+}
+.SignInLefLine{
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+}
+.SignInLefLine2{
+    height: .8px;
+    width: 30%;
+    background-color: black;
+    opacity: .4;
+    margin-top: 3px;
+}
+.SignInLefLine3{
+    opacity: .4;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.SignInLefButton{
+    height: 40px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SignInLefButtonIcon{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.SignInLefButtonP{
+    font-size: 18px;
+    margin-top: 15px;
+}
