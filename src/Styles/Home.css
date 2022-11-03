@@ -13,7 +13,7 @@
 }
 .HomeHeaderBodyDiv2{
     height: 70px;
-    width: 73%;
+    width: 100%;
     margin-top: 20px;
     margin-left: 1%;
     background-color: aliceblue;
@@ -44,10 +44,12 @@
 .HomeLeftDownButton{
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 .HomeLeftLineDiv{
     background-color: blue;
     height: 30px;
     width: 3px;
-    margin-top: -15px;
+    margin-top: -20px;
+    margin-left: 168px;
 }
