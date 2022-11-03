@@ -41,6 +41,13 @@
     width: 300px;
     margin-top: 20px;
 }
-.HomeLeftDownButtonDiv{
-    margin-top: 10px;
+.HomeLeftDownButton{
+    display: flex;
+    align-items: center;
+}
+.HomeLeftLineDiv{
+    background-color: blue;
+    height: 30px;
+    width: 3px;
+    margin-top: -15px;
 }
