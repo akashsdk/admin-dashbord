@@ -6,11 +6,11 @@ export default function SmallCard(props) {
     return (
         <div className='SmallCardBody'>
             <div className='SmallCardLeft'>
-                <BarChartOutlined className='SmallCardLeftIcon'/>
+                {props.Icon}
             </div>
             <div className='SmallCardRight'>
                 <p className='SmallCardRightP'> {props.text}</p>
-                <p className='SmallCardRightP2'>${props.amount}</p>
+                <p className='SmallCardRightP2'>{props.amount}</p>
             </div>
         </div>
     )
