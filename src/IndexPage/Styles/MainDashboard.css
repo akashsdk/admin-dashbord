@@ -1,4 +1,10 @@
 .MainDashBody{
     height: auto;
     width: auto;
+    background-color: antiquewhite;
+}
+.MainDashBodyDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

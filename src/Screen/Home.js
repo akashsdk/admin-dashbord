@@ -242,7 +242,7 @@ export default function Home() {
           {
             page == 1 ? (
               // Main Dashboard
-              <div>
+              <div style={{marginTop:'20px'}}>
                 <MainDashboard />
               </div>
             ) : page == 2 ? (

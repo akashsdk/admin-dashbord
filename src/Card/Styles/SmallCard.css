@@ -1,0 +1,43 @@
+.SmallCardBody{
+    height: 85px;
+    width: 350px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SmallCardLeft{
+    height: 60px;
+    width: 60px;
+    border-radius: 35px;
+    background-color: rgb(224, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px;
+}
+.SmallCardRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.SmallCardLeftIcon{
+    font-size: 30px;
+    color: rgb(50, 50, 252);
+}
+.SmallCardRightP{
+    font-size: 15px;
+    opacity: .6;
+    margin-top: 30px;
+    margin-left: -13px;
+    
+}
+.SmallCardRightP2{
+    font-size: 25px;
+    margin-top: -20px;
+    font-weight: bold;
+}
