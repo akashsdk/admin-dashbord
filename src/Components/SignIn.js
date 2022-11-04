@@ -76,17 +76,20 @@ export default function SignIn() {
                                 >
                                     <Input.Password />
                                 </Form.Item>
-
+                                <div>
+                                    <Checkbox>Keep me logged in</Checkbox>
+                                    <Link style={{marginLeft:'5%'}}>Frogot Password?</Link>
+                                </div>
                                 <button className='SignInLefButton' type="primary" >
                                     <p className='SignInLefButtonP'>SUBMIT</p>
                                 </button>
                             </Form>
                         </div>
-                        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px' }}>
-                            <h3>Not registered yet? 
-                            <Link to="/LogIn" >Create an Account</Link>
-                                </h3>
-                                
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px' }}>
+                            <h3>Not registered yet?
+                                <Link to="/LogIn" >Create an Account</Link>
+                            </h3>
+
                         </div>
 
                     </div>

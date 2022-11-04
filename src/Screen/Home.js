@@ -44,6 +44,7 @@ export default function Home() {
 
   return (
     <div className='HomeHeaderBody'>
+      {/* Admin Dashbord LeftSide */}
       <div className='HomeHeaderBodyDiv'>
         <div className='HomeLeftDiv'>
           <h1 style={{ marginTop: '30px' }}>Admin Dashbord</h1>
@@ -58,16 +59,16 @@ export default function Home() {
             });
             setTimeout(() => {
               message.success({
-                content: 'Home Page',
+                content: 'Main Dashboard',
                 key,
                 duration: 2,
               });
             }, 1000);
           }} className='HomeLeftDownButton'>
             <HomeOutlined style={{ color: page == 1 ? 'blue' : 'rgb(152, 152, 158)', fontSize: '20px', marginTop: '-20px', marginLeft: '10px' }} />
-            <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Home</p>
+            <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Main Dashboard</p>
             {page == 1 ? (
-              <div className='HomeLeftLineDiv'></div>
+              <div className='HomeLeftLineDiv1'></div>
             ) : (<></>)}
           </Button>
 
@@ -116,11 +117,12 @@ export default function Home() {
         </div>
       </div>
       <div style={{ height: 'auto', width: '100%', }}>
+        {/* Top Dashboard RightSide*/}
         <div className='HomeHeaderBodyDiv2'>
           <div style={{ flex: '1.5' }}>
             {
               page == 1 ? (
-                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 1</h3>
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Main</h3>
               ) : page == 2 ? (
                 <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 2</h3>
               ) : page == 3 ? (
@@ -137,6 +139,7 @@ export default function Home() {
             <Input placeholder="Search" className='HomeSearchInput' prefix={<SearchOutlined />} />
             <MenuOutlined onClick={showDrawer} className='HomeSearchMenu' />
             <BellOutlined onClick={openNotification} className='HomeSearchNotification' />
+            {/* RightSide Drawer*/}
             <Drawer
               title=""
               placement='left'
@@ -161,14 +164,14 @@ export default function Home() {
                   });
                   setTimeout(() => {
                     message.success({
-                      content: 'Home Page',
+                      content: 'Main Dashboard',
                       key,
                       duration: 2,
                     });
                   }, 1000);
                 }} className='HomeLeftDownButton'>
                   <HomeOutlined style={{ color: page == 1 ? 'blue' : 'rgb(152, 152, 158)', fontSize: '20px', marginTop: '-20px', marginLeft: '10px' }} />
-                  <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Home</p>
+                  <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Main Dashboard</p>
                   {page == 1 ? (
                     <div className='HomeLeftLineDiv'></div>
                   ) : (<></>)}
@@ -230,10 +233,12 @@ export default function Home() {
           </div>
           <div style={{ width: '10px' }} />
         </div>
+        {/* Down Dashboard RightSide */}
         <div>
           {
             page == 1 ? (
-              <div> akash 1</div>
+              // Main Dashboard
+              <div> Main Dashboard</div>
             ) : page == 2 ? (
               <div> akash 2</div>
             ) : page == 3 ? (

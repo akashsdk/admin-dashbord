@@ -53,6 +53,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-radius: 10px;
+}
+.SignInLefButton:hover{
+    background-color: aliceblue;
 }
 .SignInLefButtonIcon{
     font-size: 20px;
