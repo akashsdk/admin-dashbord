@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import '../Styles/Home.css';
+import MainDashboard from '../IndexPage/MainDashboard';
+
+
 import {
   Button, Checkbox, Form, Input, Layout,
   Col, Row, Radio, message, notification,
@@ -7,6 +10,7 @@ import {
 } from 'antd';
 import { HomeOutlined, SearchOutlined, BellOutlined, MenuOutlined } from '@ant-design/icons';
 import { Link, } from "react-router-dom";
+
 
 const { Header, Footer, Sider, Content } = Layout;
 const key = 'updatable';
@@ -238,7 +242,9 @@ export default function Home() {
           {
             page == 1 ? (
               // Main Dashboard
-              <div> Main Dashboard</div>
+              <div>
+                <MainDashboard />
+              </div>
             ) : page == 2 ? (
               <div> akash 2</div>
             ) : page == 3 ? (
