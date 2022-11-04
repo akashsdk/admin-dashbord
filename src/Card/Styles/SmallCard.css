@@ -16,14 +16,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -40px;
+    flex: 1.1;
+    margin-left: 20px;
 }
 .SmallCardRight{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 20px;
+    flex: 5;
 }
 .SmallCardLeftIcon{
     font-size: 30px;

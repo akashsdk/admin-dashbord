@@ -1,10 +1,24 @@
 .MainDashBody{
     height: auto;
-    width: auto;
-    background-color: antiquewhite;
+    width: 100%;
 }
 .MainDashBodyDiv{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .MainDashBodyDiv {
+        flex-direction: column;
+    }
+}
+.MainDashBodyDiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1300px) {
+    .MainDashBodyDiv2 {
+        flex-direction: column;
+    }
 }

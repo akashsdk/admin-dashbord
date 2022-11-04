@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../Styles/Home.css';
 import MainDashboard from '../IndexPage/MainDashboard';
+import Profile from '../IndexPage/Profile';
 
 
 import {
@@ -8,7 +9,10 @@ import {
   Col, Row, Radio, message, notification,
   Drawer, Space, Modal, Popconfirm
 } from 'antd';
-import { HomeOutlined, SearchOutlined, BellOutlined, MenuOutlined } from '@ant-design/icons';
+import {
+  HomeOutlined, SearchOutlined,
+  BellOutlined, MenuOutlined, UserOutlined
+} from '@ant-design/icons';
 import { Link, } from "react-router-dom";
 
 
@@ -55,6 +59,7 @@ export default function Home() {
         </div>
         <div className='HomeLine' />
         <div className='HomeLeftDownDiv'>
+          {/* Main Dashboard Button */}
           <Button type="text" onClick={() => {
             setPage(1);
             message.loading({
@@ -116,6 +121,29 @@ export default function Home() {
 
             {page == 3 ? (
               <div className='HomeLeftLineDiv'></div>
+            ) : (<></>)}
+          </Button>
+
+          {/* Profile Button */}
+          <Button type="text" onClick={() => {
+            setPage(4);
+            message.loading({
+              content: 'Loading...',
+              key,
+            });
+            setTimeout(() => {
+              message.success({
+                content: 'Profile Page',
+                key,
+                duration: 2,
+              });
+            }, 1000);
+          }} className='HomeLeftDownButton'>
+            <UserOutlined style={{ color: page == 4 ? 'blue' : 'rgb(152, 152, 158)', fontSize: '20px', marginTop: '-20px', marginLeft: '10px' }} />
+            <p style={{ color: page == 4 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Profile</p>
+
+            {page == 4 ? (
+              <div className='HomeLeftLineDiv4'></div>
             ) : (<></>)}
           </Button>
         </div>
@@ -227,10 +255,10 @@ export default function Home() {
             </Drawer>
             <div onClick={showModal} className='HomeSearchProfile'></div>
             <Modal title="👋  Hey, Akash" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-              <div style={{display:'flex', flexDirection:'column'}}>
-                <Link style={{ marginTop:'15px' }} to="/Profile">Profile Setting</Link>
-                <Link style={{ marginTop:'15px' }} to="/">Newsletter Setting</Link>
-                <Link style={{ color: 'red',marginTop:'15px' }} to="/SignIn">Log out</Link>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <Link style={{ marginTop: '15px' }} to="/Profile">Profile Setting</Link>
+                <Link style={{ marginTop: '15px' }} to="/">Newsletter Setting</Link>
+                <Link style={{ color: 'red', marginTop: '15px' }} to="/SignIn">Log out</Link>
               </div>
 
             </Modal>
@@ -242,7 +270,7 @@ export default function Home() {
           {
             page == 1 ? (
               // Main Dashboard
-              <div style={{marginTop:'20px'}}>
+              <div style={{ marginTop: '20px' }}>
                 <MainDashboard />
               </div>
             ) : page == 2 ? (
@@ -251,7 +279,12 @@ export default function Home() {
               <div>
                 akash 3
               </div>
-            ) : (
+            ) : page == 4 ? (
+              // Profile Page
+              <div style={{ marginTop: '20px' }}>
+                <Profile />
+              </div>
+            ) :(
               <p>Page Error</p>
             )
           }

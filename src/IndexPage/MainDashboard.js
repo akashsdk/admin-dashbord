@@ -9,20 +9,38 @@ export default function MainDashboard() {
     return (
         <div className='MainDashBody'>
             <div className='MainDashBodyDiv'>
-                <SmallCard Icon={<BarChartOutlined className='SmallCardLeftIcon' />}
-                    text='Earnings' amount='$350.4' />
-                <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                    text='Spend this month' amount='$1,500' />
-                <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                    text='Sales' amount='$580.56' />
+                <div className='MainDashBodyDiv2'>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<BarChartOutlined className='SmallCardLeftIcon' />}
+                            text='Earnings' amount='$350.4' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                            text='Spend this month' amount='$1,500' />
+                    </div>
+                </div>
+
+                <div style={{ flex: '1', }}>
+                    <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                        text='Sales' amount='$580.56' />
+                </div>
             </div>
             <div className='MainDashBodyDiv'>
-                <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                    text='Your balance' amount='$1200.56' />
-                <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                    text='New Tasks' amount='567' />
-                <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                    text='Total Projects' amount='56' />
+                <div className='MainDashBodyDiv2'>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                            text='Your balance' amount='$1200.56' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                            text='New Tasks' amount='567' />
+                    </div>
+                </div>
+
+                <div style={{ flex: '1', }}>
+                    <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                        text='Total Projects' amount='56' />
+                </div>
             </div>
         </div>
     )
