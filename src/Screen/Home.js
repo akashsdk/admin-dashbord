@@ -159,6 +159,8 @@ export default function Home() {
                 <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 2</h3>
               ) : page == 3 ? (
                 <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 3</h3>
+              ) :page == 4 ? (
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Profile</h3>
               ) : (
                 <p>Page Error</p>
               )
