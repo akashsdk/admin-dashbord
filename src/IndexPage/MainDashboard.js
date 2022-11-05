@@ -4,6 +4,7 @@ import '../Card/Styles/SmallCard.css';
 import SmallCard from '../Card/SmallCard';
 import { BarChartOutlined } from '@ant-design/icons';
 import { FaDollarSign } from "react-icons/fa";
+import { AiFillFileText, AiOutlineFileSearch, AiTwotoneCalendar} from "react-icons/ai";
 
 export default function MainDashboard() {
     return (
@@ -15,7 +16,7 @@ export default function MainDashboard() {
                             text='Earnings' amount='$350.4' />
                     </div>
                     <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                        <SmallCard Icon={<AiTwotoneCalendar className='SmallCardLeftIcon' />}
                             text='Spend this month' amount='$1,500' />
                     </div>
                 </div>
@@ -32,13 +33,13 @@ export default function MainDashboard() {
                             text='Your balance' amount='$1200.56' />
                     </div>
                     <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                            text='New Tasks' amount='567' />
+                        <SmallCard Icon={<AiFillFileText className='SmallCardLeftIcon' />}
+                            text='New Tasks' amount='567' /> 
                     </div>
                 </div>
 
                 <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
+                    <SmallCard Icon={<AiOutlineFileSearch className='SmallCardLeftIcon' />}
                         text='Total Projects' amount='56' />
                 </div>
             </div>

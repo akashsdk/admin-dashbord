@@ -1,0 +1,46 @@
+.ProfileCardBody{
+    height: 450px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProfileCardBodyDiv{
+    height: 410px;
+    width: 310px;
+    border-radius: 20px;
+}
+.ProfileCardTopDiv{
+    background-color: aqua;
+    height: 160px;
+    width: 310px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ProfileCardImgDiv{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #fff;
+    margin-top: -43px;
+    margin-left: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ProfileCardImg{
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+}
+.ProfileCardName{
+    font-size: 20px;
+    font-weight: 800;
+}
+.ProfileCardName1{
+    margin-top: -20px;
+    opacity: .6;
+}
