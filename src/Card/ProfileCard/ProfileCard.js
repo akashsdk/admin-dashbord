@@ -1,6 +1,8 @@
 import React from 'react';
 import '../Styles/ProfileCard.css';
 import img from '../../icon/ProfileImage.png';
+import { EditOutlined } from '@ant-design/icons';
+import { Link, } from "react-router-dom";
 
 export default function ProfileCard() {
     return (
@@ -13,8 +15,10 @@ export default function ProfileCard() {
                     <div className='ProfileCardImgDiv'>
                         <img src={img} className='ProfileCardImg' />
                     </div>
-                    <p className='ProfileCardName'>Shahriar Akash</p>
+                    <p className='ProfileCardName'>Shahriar Akash
+                        <Link to="/Profile"> <EditOutlined /></Link></p>
                     <p className='ProfileCardName1'>Graphics Design</p>
+
                 </div>
             </div>
 
