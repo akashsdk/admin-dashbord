@@ -2,9 +2,10 @@ import React from 'react';
 import './Styles/MainDashboard.css';
 import '../Card/Styles/SmallCard.css';
 import SmallCard from '../Card/SmallCard';
-import { BarChartOutlined } from '@ant-design/icons';
+import { EditOutlined } from '@ant-design/icons';
 import { FaDollarSign } from "react-icons/fa";
-import { AiFillFileText, AiOutlineFileSearch, AiTwotoneCalendar} from "react-icons/ai";
+import { AiFillFileText, AiOutlineFileSearch, AiTwotoneCalendar, } from "react-icons/ai";
+import { Link, } from "react-router-dom";
 
 export default function MainDashboard() {
     return (
@@ -12,8 +13,8 @@ export default function MainDashboard() {
             <div className='MainDashBodyDiv'>
                 <div className='MainDashBodyDiv2'>
                     <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<BarChartOutlined className='SmallCardLeftIcon' />}
-                            text='Earnings' amount='$350.4' />
+                        <SmallCard Icon={<Link to='/Profile' ><EditOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Profile Status ( Complete )' amount='100%' />
                     </div>
                     <div style={{ flex: '1', }}>
                         <SmallCard Icon={<AiTwotoneCalendar className='SmallCardLeftIcon' />}
@@ -34,7 +35,7 @@ export default function MainDashboard() {
                     </div>
                     <div style={{ flex: '1', }}>
                         <SmallCard Icon={<AiFillFileText className='SmallCardLeftIcon' />}
-                            text='New Tasks' amount='567' /> 
+                            text='New Tasks' amount='567' />
                     </div>
                 </div>
 
