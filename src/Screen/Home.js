@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import '../Styles/Home.css';
 import MainDashboard from '../IndexPage/MainDashboard';
 import Profile from '../IndexPage/Profile';
+import OrganisationProfile from '../IndexPage/OrganisationProfile';
+import EmployeeCreation from '../IndexPage/EmployeeCreation';
 
 
 import {
   Button, Checkbox, Form, Input, Layout,
   Col, Row, Radio, message, notification,
-  Drawer, Space, Modal, Popconfirm
+  Drawer, Space, Modal, Popconfirm, Select
 } from 'antd';
 import {
   HomeOutlined, SearchOutlined,
   BellOutlined, MenuOutlined, UserOutlined
 } from '@ant-design/icons';
 import { Link, } from "react-router-dom";
-
+const { Option, OptGroup } = Select;
 
 const { Header, Footer, Sider, Content } = Layout;
 const key = 'updatable';
@@ -48,6 +50,10 @@ export default function Home() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+    setPage(1.1);
+  };
 
 
   return (
@@ -60,26 +66,44 @@ export default function Home() {
         <div className='HomeLine' />
         <div className='HomeLeftDownDiv'>
           {/* Main Dashboard Button */}
-          <Button type="text" onClick={() => {
-            setPage(1);
-            message.loading({
-              content: 'Loading...',
-              key,
-            });
-            setTimeout(() => {
-              message.success({
-                content: 'Main Dashboard',
+          <div>
+            <Button type="text" onClick={() => {
+              setPage(1);
+              message.loading({
+                content: 'Loading...',
                 key,
-                duration: 2,
               });
-            }, 1000);
-          }} className='HomeLeftDownButton'>
-            <HomeOutlined style={{ color: page == 1 ? 'blue' : 'rgb(152, 152, 158)', fontSize: '20px', marginTop: '-20px', marginLeft: '10px' }} />
-            <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Main Dashboard</p>
+              setTimeout(() => {
+                message.success({
+                  content: 'Main Dashboard',
+                  key,
+                  duration: 2,
+                });
+              }, 1000);
+            }} className='HomeLeftDownButton'>
+              <HomeOutlined style={{ color: page == 1 ? 'blue' : 'rgb(152, 152, 158)', fontSize: '20px', marginTop: '-20px', marginLeft: '10px' }} />
+              <p style={{ color: page == 1 ? 'black' : 'rgb(152, 152, 158)', fontSize: '20px', marginLeft: '30px' }}>Main Dashboard</p>
+              {page == 1 ? (
+                <div className='HomeLeftLineDiv1'></div>
+              ) : (<></>)}
+            </Button>
             {page == 1 ? (
-              <div className='HomeLeftLineDiv1'></div>
+              <div>
+                <Select
+                  defaultValue="Organisation"
+                  style={{
+                    width: 200,
+                  }}
+                  onChange={handleChange}
+                >
+                  <OptGroup label="Organisation">
+                    <Option value="Profile">Organisation Profile</Option>
+                    <Option value="EmployeeCreation">Employee Creation</Option>
+                  </OptGroup>
+                </Select>
+              </div>
             ) : (<></>)}
-          </Button>
+          </div>
 
           <Button type="text" onClick={() => {
             setPage(2);
@@ -146,6 +170,8 @@ export default function Home() {
               <div className='HomeLeftLineDiv4'></div>
             ) : (<></>)}
           </Button>
+
+
         </div>
       </div>
       <div style={{ height: 'auto', width: '100%', }}>
@@ -154,13 +180,17 @@ export default function Home() {
           <div style={{ flex: '1.5' }}>
             {
               page == 1 ? (
-                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Main</h3>
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page/ Organisation</h3>
+              ) : page == 1.1 ? (
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page/ Profile</h3>
+              ) : page == 1.2 ? (
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page/ Employee</h3>
               ) : page == 2 ? (
                 <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 2</h3>
               ) : page == 3 ? (
                 <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Home 3</h3>
-              ) :page == 4 ? (
-                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page / Profile</h3>
+              ) : page == 4 ? (
+                <h3 style={{ opacity: '.6', marginTop: '10px' }}>Page/ Profile</h3>
               ) : (
                 <p>Page Error</p>
               )
@@ -275,6 +305,16 @@ export default function Home() {
               <div style={{ marginTop: '20px' }}>
                 <MainDashboard />
               </div>
+            ) : page == 1.1 ? (
+              // Organisation Profile
+              <div style={{ marginTop: '20px' }}>
+                <OrganisationProfile />
+              </div>
+            ) : page == 1.2 ? (
+              // Employee Creation
+              <div style={{ marginTop: '20px' }}>
+                <EmployeeCreation />
+              </div>
             ) : page == 2 ? (
               <div> akash 2</div>
             ) : page == 3 ? (
@@ -286,7 +326,7 @@ export default function Home() {
               <div style={{ marginTop: '20px' }}>
                 <Profile />
               </div>
-            ) :(
+            ) : (
               <p>Page Error</p>
             )
           }
