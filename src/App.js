@@ -13,7 +13,8 @@ import Footer from './Components/Footer';
 import WrongPage from './Others/WrongPage';
 import SignIn from './Components/SignIn';
 import LogIn from './Components/LogIn';
-import Profile from './Screen/Profile'
+import Profile from './Screen/Profile';
+import EmployeesAccording from './OthersScreen/EmployeesAccording';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/LogIn" element={<LogIn />} />
             <Route path="/Profile" element={<Profile />} />
+            <Route path="/EmployeesAccording" element={<EmployeesAccording />} />
           </Routes>
            {/* <Footer />  */}
         </div>
