@@ -11,28 +11,26 @@ export default function MainDashboard() {
     return (
         <div className='MainDashBody'>
             <div className='MainDashBodyDiv'>
-                <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<Link to='/Profile' ><EditOutlined className='SmallCardLeftIcon' /></Link>}
-                        text='Profile Status ( Complete )' amount='100%' />
-                </div>
-                <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
-                        text='Employees According to RTI' amount='10' />
-                </div>
-
-                <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                        text='Sales' amount='$580.56' />
-                </div>
-                <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<FaDollarSign className='SmallCardLeftIcon' />}
-                        text='Your balance' amount='$1200.56' />
-                </div>
-                <div style={{ flex: '1', }}>
-                    <SmallCard Icon={<AiFillFileText className='SmallCardLeftIcon' />}
-                        text='New Tasks' amount='567' />
-                </div>
-
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<Link to='/Profile' ><EditOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Profile Status ( Complete )' amount='100%' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Employees According to RTI' amount='10' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Employees According to RTI' amount='10' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Employees According to RTI' amount='10' />
+                    </div>
+                    <div style={{ flex: '1', }}>
+                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
+                            text='Employees According to RTI' amount='10' />
+                    </div>
 
             </div>
         </div>
