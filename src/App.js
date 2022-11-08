@@ -21,7 +21,7 @@ function App() {
     <ConfigProvider locale={frFR} >
       <BrowserRouter>
         <div className='App'>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route path="*" element={<WrongPage />} />
             <Route path="/" element={<Home />} />
