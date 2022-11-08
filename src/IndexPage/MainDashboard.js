@@ -11,27 +11,15 @@ export default function MainDashboard() {
     return (
         <div className='MainDashBody'>
             <div className='MainDashBodyDiv'>
-                    <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<Link to='/Profile' ><EditOutlined className='SmallCardLeftIcon' /></Link>}
-                            text='Profile Status ( Complete )' amount='100%' />
-                    </div>
-                    <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
-                            text='Employees According to RTI' amount='10' />
-                    </div>
-                    <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
-                            text='Employees According to RTI' amount='10' />
-                    </div>
-                    <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
-                            text='Employees According to RTI' amount='10' />
-                    </div>
-                    <div style={{ flex: '1', }}>
-                        <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
-                            text='Employees According to RTI' amount='10' />
-                    </div>
-
+                <div style={{ flex: '1', }}>
+                    <SmallCard Icon={<Link to='/Profile' ><EditOutlined className='SmallCardLeftIcon' /></Link>}
+                        text='Profile Status ( Complete )' amount='100%' />
+                </div>
+                <div style={{ flex: '1', }}>
+                    <SmallCard Icon={<Link to='/EmployeesAccording' ><ProfileOutlined className='SmallCardLeftIcon' /></Link>}
+                        text='Employees According to RTI' amount='10' />
+                </div>
+                
             </div>
         </div>
     )
