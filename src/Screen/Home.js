@@ -97,8 +97,8 @@ export default function Home() {
                   onChange={handleChange}
                 >
                   <OptGroup label="Organisation">
-                    <Option value="Profile">Organisation Profile</Option>
-                    <Option value="EmployeeCreation">Employee Creation</Option>
+                    <Option value="1.1">Organisation Profile</Option>
+                    <Option value="1.2">Employee Creation</Option>
                   </OptGroup>
                 </Select>
               </div>
