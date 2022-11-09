@@ -11,12 +11,18 @@ import {
 export default function Header() {
   return (
     <div className='Header-Body'>
-      <div style={{flex:'1'}}>
-        <Link>
-      <HomeOutlined />
+      <div style={{
+        flex: '1',
+        display: 'flex',
+        marginLeft: '2%',
+        alignItems: 'center',
+      }}>
+        <Link to='/'>
+          <HomeOutlined style={{ fontSize: '30px' }} />
         </Link>
+        <p className='Header-Title'>UK HR Cloud</p>
       </div>
-      <div style={{flex:'5'}}>aaa</div>
+      <div style={{ flex: '1' }}></div>
       {/* <PageHeader
       
         className="site-page-header"
