@@ -5,8 +5,10 @@ import { Link, } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div>
-      <PageHeader
+    <div className='Header-Body'>
+      <div>akash</div>
+      <div>aaa</div>
+      {/* <PageHeader
       
         className="site-page-header"
         onBack={() =>{
@@ -14,7 +16,7 @@ export default function Header() {
         }}
         title="UK HR Cloud"
         subTitle=""
-      />
+      /> */}
     </div>
   )
 }

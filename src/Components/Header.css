@@ -25,3 +25,9 @@
 .site-page-header {
     border: 1px solid rgb(168, 169, 171);
   }
+  .Header-Body{
+    height: 60px;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+  }
